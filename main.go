@@ -55,7 +55,7 @@ func main() {
 	//repository.NewCartRepository(db).InitTable()
 
 	service := micro.NewService(
-		micro.Name("go.micro.service.product"),
+		micro.Name("go.micro.service.cart"),
 		micro.Version("latest"),
 		micro.Address("127.0.0.1:8087"), //服务启动的地址
 		micro.Registry(consulReg),       //注册中心
