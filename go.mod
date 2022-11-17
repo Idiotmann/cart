@@ -3,7 +3,6 @@ module github.com/Idiotmann/cart
 go 1.18
 
 require (
-	github.com/Idiotmann/common v0.0.0-20221116061710-70946ac70b85
 	github.com/go-micro/plugins/v4/registry/consul v1.2.0
 	github.com/go-micro/plugins/v4/wrapper/ratelimiter/uber v1.2.0
 	github.com/go-micro/plugins/v4/wrapper/trace/opentracing v1.2.0
@@ -15,6 +14,7 @@ require (
 
 require (
 	github.com/HdrHistogram/hdrhistogram-go v1.1.2 // indirect
+	github.com/Idiotmann/common v0.0.0-20221116061710-70946ac70b85 // indirect
 	github.com/Microsoft/go-winio v0.5.0 // indirect
 	github.com/ProtonMail/go-crypto v0.0.0-20210428141323-04723f9f07d7 // indirect
 	github.com/acomagu/bufpipe v1.0.3 // indirect

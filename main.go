@@ -4,7 +4,7 @@ import (
 	"github.com/Idiotmann/cart/domain/repository"
 	service2 "github.com/Idiotmann/cart/domain/service"
 	"github.com/Idiotmann/cart/handler"
-	pb "github.com/Idiotmann/cart/proto"
+	cart "github.com/Idiotmann/cart/proto"
 	"github.com/Idiotmann/common"
 	"github.com/go-micro/plugins/v4/registry/consul"
 	"github.com/go-micro/plugins/v4/wrapper/ratelimiter/uber"
@@ -72,7 +72,7 @@ func main() {
 	cartDataService := service2.NewCartDataService(repository.NewCartRepository(db))
 
 	// Register Handler
-	pb.RegisterCartHandler(service.Server(), &handler.Cart{CartDataService: cartDataService})
+	cart.RegisterCartHandler(service.Server(), &handler.Cart{CartDataService: cartDataService})
 	if err := service.Run(); err != nil {
 		log.Fatal(err)
 	}
